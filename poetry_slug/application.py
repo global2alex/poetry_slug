@@ -2,14 +2,14 @@ from argparse import ArgumentParser
 
 class Application:
   def __init__(self):
-    self.user_input = __parse_args__()
+    self.user_input = self.__parse_args__()
 
     if self.user_input.mass_compare:
       print("Mass Compare!")
     elif self.user_input.compare:
       print("Comapre Individual Files")
 
-  def __parse_args__():
+  def __parse_args__(self):
     parser = ArgumentParser(
       prog="python main.py",
       description="""
